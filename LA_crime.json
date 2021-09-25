@@ -20,11 +20,11 @@
         "stroke": "white"
       }
     },
-     {
+    {
       "data": {
         "url": "https://raw.githubusercontent.com/felismao/FIT-3179-Assignment-2/main/Crime_Data_from_2020_to_Present.csv"
       },
-        "projection": {
+      "projection": {
         "type": "mercator"
       },
       "mark": "circle",
@@ -33,7 +33,7 @@
           "field": "longitude",
           "type": "quantitative"
         },
-         "latitude": {
+        "latitude": {
           "field": "latitude",
           "type": "quantitative"
         },
