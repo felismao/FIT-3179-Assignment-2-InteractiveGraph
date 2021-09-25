@@ -13,14 +13,27 @@
     },
     "transform": [
       {
-      "lookup": "properties.NAME",
+      "lookup": "properties.name",
       "from": {
       "data": {
-      "url": "https://raw.githubusercontent.com/KaneSec/vega_lite/main/3_choropleth_map/da
-     ta/covid_10_10_2020.csv"
+      "url": "https://github.com/felismao/FIT-3179-Assignment-2/blob/eed8bafb670b2d028d4cf63c4cab240fd0bb0d90/Crime_Data_from_2020_to_Present.csv"
       },
-      "key": "Country",
-      "fields": ["Active"]
+      "key": "AREA NAME",
+      "fields": ["DR_NO"]
       }
+      }
+    ],
+      "mark": {"type": "geoshape"},
+      "encoding": {
+      "color": {
+      "field": "Active Cases",
+      "type": "quantitative",
+      "scale": {"type": "log"}
       },
+      "tooltip": [
+      {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+      {"field": "Active", "type": "quantitative"}
+      ]
+      }
+     }
      
