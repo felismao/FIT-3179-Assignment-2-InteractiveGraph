@@ -1,0 +1,26 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Los Angles Crime in 2020 - 2021",
+    "width": 800,
+    "height": 600,
+    "projection": {"type": "equalEarth"},
+    "data": {
+      "url": "https://github.com/felismao/FIT-3179-Assignment-2/blob/13c5c6c39a074b79f1c0f6955d2dac868cbe8f83/LA%20Map.json",
+      "format": {
+            "type": "topojson",
+            "feature": "LA Map"
+          }
+    },
+    "transform": [
+      {
+      "lookup": "properties.NAME",
+      "from": {
+      "data": {
+      "url": "https://raw.githubusercontent.com/KaneSec/vega_lite/main/3_choropleth_map/da
+     ta/covid_10_10_2020.csv"
+      },
+      "key": "Country",
+      "fields": ["Active"]
+      }
+      },
+     
