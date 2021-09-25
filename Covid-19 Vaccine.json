@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Covid-19 Fully Vaccinated People",
+  "width": 800,
+  "height": 600,
+  "projection": {"type": "equalEarth"},
+  "data": {
+  "url": "https://raw.githubusercontent.com/felismao/FIT-3179-Assignment-2/main/world%20map.json",
+  "format": {"type": "topojson", "feature": "custom.geo"}
+  },
+  "transform": [
+  {
+  "lookup": "properties.name",
+  "from": {
+  "data": {
+  "url": "https://raw.githubusercontent.com/felismao/FIT-3179-Assignment-2/main/vaccination-data(31-08-2021).csv"
+  },
+  "key": "country",
+  "fields": ["PERSONS_FULLY_VACCINATED_PER100"]
+  }
+  }
+  ],
+  "mark": {"type": "geoshape"},
+  "encoding": {
+  "color": {
+  "field": "Fully",
+  "type": "quantitative",
+  "scale": {"type": "log"}
+  },
+  "tooltip": [
+  {"field": "properties.name", "type": "nominal", "title": "country"},
+  {"field": "PERSONS_FULLY_VACCINATED_PER100", "type": "quantitative"}
+  ]
+  }
+ }
