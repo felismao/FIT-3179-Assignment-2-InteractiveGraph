@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 500,
+  "title": "Vulcanic Events",
+  "projection": {"type": "equalEarth"}, 
+  "layer": [
+  {
+  "data": {
+  "url":
+ "https://raw.githubusercontent.com/felismao/FIT-3179-Assignment-2/main/world%20map.json"
+ ,
+  "format": {"type": "topojson", "feature": "custom.geo"}
+  },
+  "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+  },
+  {
+  "data": {
+  "url": "https://raw.githubusercontent.com/felismao/FIT-3179-Assignment-2/main/volcano-events0-21.csv"
+  },
+  "mark": {"type": "circle"},
+ 
+  "encoding": {
+  "longitude": {"field": "Longitude", "type": "quantitative"},
+  "latitude": {"field": "Latitude", "type": "quantitative"},
+  "size": {
+  "field": "VEI",
+  "type": "quantitative",
+  "scale": {"domain": [1, 5]}
+  }
+  }
+  }
+
+  ]
+ }
