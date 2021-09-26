@@ -26,7 +26,7 @@
   "size": {
   "field": "VEI",
   "type": "quantitative",
-  "scale": {"domain": [1, 5]}
+  "scale": {"domain": [3, 6]}
   }
   }
   }
