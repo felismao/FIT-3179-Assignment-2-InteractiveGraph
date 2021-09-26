@@ -8,7 +8,7 @@
   {
   "data": {
   "url":
- "https://raw.githubusercontent.com/felismao/FIT-3179-Assignment-2/main/world%20map.json"
+ "https://raw.githubusercontent.com/felismao/FIT-3179-Assignment-2/main/JS/world%20map.json"
  ,
   "format": {"type": "topojson", "feature": "custom.geo"}
   },
@@ -16,7 +16,7 @@
   },
   {
   "data": {
-  "url": "https://raw.githubusercontent.com/felismao/FIT-3179-Assignment-2/main/volcano-events0-21.csv"
+  "url": "https://raw.githubusercontent.com/felismao/FIT-3179-Assignment-2/main/Data/volcano-events0-21.csv"
   },
   "mark": {"type": "circle"},
  
