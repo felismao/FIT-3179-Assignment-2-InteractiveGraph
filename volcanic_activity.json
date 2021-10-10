@@ -45,7 +45,26 @@
               {"field": "Location", "type": "nominal"},
               {"field": "Country", "type": "nominal"}
      ]
-  }
+  },
+  "layer": [
+      {"mark": {"type": "circle", "opacity": 1, "size": 15}},
+            {
+              "transform": [
+                {
+                  "window": [{"op": "rank", "as": "ranking"}],
+                  "sort": [{"field": "VEI", "order": "descending"}]
+                },
+                {"filter": "datum.ranking == 1"},
+                {
+                  "calculate": "'The most explosive volcano: ' + datum['VEI']",
+                  "as": "text_annotation"
+                }
+              ],
+              "mark": {"type": "text", "align": "left", "dx": 4},
+              "encoding": {"text": {"field": "text_annotation"}}
+            }
+          
+  ]
   }
   ]
   },
