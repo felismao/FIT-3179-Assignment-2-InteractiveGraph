@@ -1,9 +1,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 800,
+  "projection": {"type": "equalEarth"}, 
+  "vconcat": [
+  {
+  "width": "900",
   "height": 500,
   "title": "Volcanic Events",
-  "projection": {"type": "equalEarth"}, 
+  "data": {
+  "url": "https://raw.githubusercontent.com/felismao/FIT-3179-Assignment-2/main/Data/volcano-events0-21.csv"
+  },
   "layer": [
   {
   "data": {
@@ -14,22 +19,62 @@
   },
   "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
   },
+  
   {
-  "data": {
-  "url": "https://raw.githubusercontent.com/felismao/FIT-3179-Assignment-2/main/Data/volcano-events0-21.csv"
-  },
+    "transform": [
+ {"filter": {"param": "time_brush"}}
+],
+  
   "mark": {"type": "circle"},
  
   "encoding": {
   "longitude": {"field": "Longitude", "type": "quantitative"},
   "latitude": {"field": "Latitude", "type": "quantitative"},
-  "size": {
+  "color": {
   "field": "VEI",
   "type": "quantitative",
-  "scale": {"domain": [3, 6]}
-  }
-  }
-  }
+  "scale": {
+    "domain": [3,4, 5, 6, 7],
+    "type": "threshold",
+     "range":  ["#feedde","#fdd0a2","#fdae6b","#fd8d3c","#e6550d","#a63603"]}
 
+    },
+     "tooltip": [
+              {"field": "Year", "type": "temporal"},
+              {"field": "VEI", "type": "quantitative"},
+              {"field": "Location", "type": "nominal"},
+              {"field": "Country", "type": "nominal"}
+     ]
+  }
+  }
   ]
- }
+  },
+  {
+    "width": "900",
+      "height": 100,
+      "mark": "line",
+      "title": "Use this line chart to filter out the data based on time",
+"data": {
+  "url": "https://raw.githubusercontent.com/felismao/FIT-3179-Assignment-2/main/Data/volcano-events0-21.csv"
+      },
+      "params":[
+        {
+          "name": "time_brush",
+           "select": {"type": "interval", "encodings": ["x"]}
+        }
+      ],
+            "encoding": {
+        "x": {
+          "field": "Year",
+          "timeUnit": "year",
+          "axis": {"title": "", "format": "%Y"}
+        },
+        "y": {
+          "aggregate": "count",
+          "axis": {"tickCount": 5, "grid": false},
+          "title": "Count"
+        }
+      }
+  }
+  ]
+  }
