@@ -36,7 +36,7 @@
   "scale": {
     "domain": [3,4, 5, 6, 7],
     "type": "threshold",
-     "range":  ["#feedde","#fdd0a2","#fdae6b","#fd8d3c","#e6550d","#a63603"]}
+     "range":  ["#fdd0a2","#fdae6b","#fd8d3c","#e6550d","#a63603"]}
 
     },
      "tooltip": [
@@ -77,8 +77,4 @@
       }
   }
   ]
-<<<<<<< HEAD
   }
-=======
-  }
->>>>>>> 5d3723979e59b11faa3a22776030113b2dbcfb35
