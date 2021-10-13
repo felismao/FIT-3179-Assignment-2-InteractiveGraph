@@ -1,0 +1,36 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Most Active Volcano Type",
+    "data": {"url": "https://raw.githubusercontent.com/felismao/FIT-3179-Assignment-2/main/Data/volcano-events0-21.csv"},
+    "mark": "bar",
+    "transform": [
+      {
+        "aggregate": [{"op": "count", "field": "Year", "as": "aggregate_year"}],
+        "groupby": ["Type"]
+      },
+      {
+        "window": [{"op": "row_number", "as": "rank"}],
+        "sort": [{ "field": "aggregate_year", "order": "descending" }]
+      },
+      {
+        "calculate": "datum.rank < 10? datum.Type : 'All Others'", "as": "ranked_type"
+      },
+      {
+      "filter": "datum.rank <= 10"
+      }
+    ],
+    "encoding": {
+      "x": {
+        "field": "aggregate_year",
+        "type": "quantitative",
+        "title": null
+      },
+      "y": {
+        "sort": {"op": "count", "field": "aggregate_year", "order": "descending"},
+        "field": "ranked_type",
+        "type": "ordinal",
+        "title": null
+      }
+    }
+  }
+  
