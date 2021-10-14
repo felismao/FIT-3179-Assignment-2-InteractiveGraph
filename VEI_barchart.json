@@ -17,7 +17,7 @@
       "tooltip":[
         {"aggregate":"count"},
         {"field":"VEI"}
-      ]s
+      ]
     }
   }
   
