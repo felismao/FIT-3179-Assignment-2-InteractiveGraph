@@ -1,27 +1,30 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Stock prices of 5 Tech Companies over Time.",
     "data": {"url": "https://raw.githubusercontent.com/felismao/FIT-3179-Assignment-2/main/Data/volcano-events0-21.csv"},
+    "title": "Number of Volcanic Activity Per Year",
+      "width": "1200",
+    "height": 200,
     "mark": {
       "type": "line",
       "point": true
     },
     "params":[{
       "name": "year",
-      "value": 1600,
+      "value": 1970,
       "bind":{
         "input":"range",
-        "min": 1600,
+        "min": 1970,
         "max": 2020,
-        "step": 50
+        "step": 5
       }
     }],
     "encoding": {
+      
       "x": {"field": "Year"},
       "y": {"aggregate":"count", "field": "Year", "type": "quantitative"}
     },
   "transform":[
   {"filter": "datum.Year > year"},
-  {"filter": "year >= 1600"}]
+  {"filter": "year >= 1800"}]
   }
   
