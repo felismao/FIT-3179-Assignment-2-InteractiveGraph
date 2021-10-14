@@ -1,0 +1,24 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Eruptions per Volcano Explosivity Index (VEI)",
+    "data": {"url": "https://raw.githubusercontent.com/felismao/FIT-3179-Assignment-2/main/Data/volcano-events0-21.csv"},
+    "mark": "bar",
+     "encoding": {
+      "x": {"field": "VEI", "type": "quantitative"},
+      "y": {"aggregate": "count", "field": "Year"},
+      "color":{
+        "field": "VEI",
+        "type":"quantitative",
+        "scale":{
+          "domain": [1,2,3,4,5,6,7],
+          "range": ["#fdae6b","#fd8d3c","#e6550d","#a63603"]
+        }
+      },
+      "tooltip":[
+        {"aggregate":"count"},
+        {"field":"VEI"}
+      ]s
+    }
+  }
+  
+  

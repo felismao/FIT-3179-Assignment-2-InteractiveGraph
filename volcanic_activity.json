@@ -36,7 +36,7 @@
   "scale": {
     "domain": [3,4, 5, 6, 7],
     "type": "threshold",
-     "range":  ["#fdd0a2","#fdae6b","#fd8d3c","#e6550d","#a63603"]}
+     "range":  ["#fdae6b","#fd8d3c","#e6550d","#a63603"]}
 
     },
      "tooltip": [
