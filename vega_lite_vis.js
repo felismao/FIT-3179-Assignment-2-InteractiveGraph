@@ -14,6 +14,6 @@ vegaEmbed("#top-volcano", vg_3).then(function(result) {
    }).catch(console.error);
 
    var vg_4 ="VEI_barchart.json";
-   vegaEmbed("VEI-barchart", vg_4).then(function(result) {
+   vegaEmbed("#VEI-barchart", vg_4).then(function(result) {
        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
       }).catch(console.error);
