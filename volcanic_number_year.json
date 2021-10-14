@@ -20,11 +20,15 @@
     }],
     "encoding": {
       
-      "x": {"field": "Year"},
-      "y": {"aggregate":"count", "field": "Year", "type": "quantitative"}
-    },
+      "x": {"field": "Year", "type":"nominal"},
+      "y": {"aggregate":"count", "field": "Year", "type": "quantitative"},
+    "tooltip":[
+    {"field": "Year", "type":"nominal"},
+    {"aggregate":"count" ,"type":"quantitative"}
+  ]
+  },
   "transform":[
   {"filter": "datum.Year > year"},
-  {"filter": "year >= 1800"}]
+  {"filter": "year >= 1970"}]
   }
   
