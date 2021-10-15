@@ -10,6 +10,7 @@ h1{
 
 p{
     font-family: 'Oswald', sans-serif;
+    font-size: 40px;
 }
 
 .fullmap{
@@ -29,3 +30,11 @@ p{
   .half{
       width: 50%;
   }
+
+  .page {
+    width: 850px;
+    background-color: white;
+    margin: auto;
+    padding: 50px;
+    padding-top: 35px;
+}
