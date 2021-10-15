@@ -9,8 +9,12 @@
 <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
  <link rel="stylesheet" href="style.css">
  <script src="vega_lite_vis.js"></script>
+ <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
@@ -22,9 +26,13 @@
     <div class="page">
         <h1>Volcanic Eruption</h1>
         <p>There are more than 500 active volcanoes in the world. More than half of those volcanoes are part of the "Ring of Fire," a region that encircles the Pacific Ocean</p>
-        <div class = "row">
-                <div id="volcanic-activity" class= "fullmap"></div>
-                <div id="VEI-barchart" class ="VEI"></div>
+        <div class = "pure-g">
+            <div class = "pure-u-1-2">
+                <div id="volcanic-activity" class= "container"></div>
+            </div>
+            <div class = "pure-u-1-2">
+                <div id="VEI-barchart" class ="container"></div>
+            </div>
         </div>
     
          <p>Volcanic Explosivity Index (VEI) is a scale that describes the size of explosive volcanic eruptions base on magnitude and intensity. 
@@ -37,7 +45,7 @@
                 <div id = "top-volcano"></div>
             </div>
             <div class = "half">
-                <p></p>
+                <p>Stratovolcanoes have the highest </p>
             </div>
         </div>
         <div id = "volcanic-number-peryear">
