@@ -1,0 +1,17 @@
+h1{
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    font-size: 60px;
+}
+
+.page {
+    width: 850px;
+    background-color: white;
+    margin: auto;
+    padding: 50px;
+    padding-top: 35px;
+}
+
+p{
+    font-family: 'Oswald', sans-serif;
+}
