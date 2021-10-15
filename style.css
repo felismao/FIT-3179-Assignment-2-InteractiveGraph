@@ -25,3 +25,7 @@ p{
     flex-wrap: wrap;
     margin-top: 5px;
   }
+
+  .half{
+      width: 50%;
+  }
