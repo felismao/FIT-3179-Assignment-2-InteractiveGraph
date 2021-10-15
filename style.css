@@ -19,3 +19,9 @@ p{
 .VEI{
     width: 16.66%;
 }
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+  }
