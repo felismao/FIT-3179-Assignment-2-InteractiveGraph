@@ -8,10 +8,13 @@ h1{
     width: 850px;
     background-color: white;
     margin: auto;
-    padding: 50px;
+    padding: 20px;
     padding-top: 35px;
 }
 
 p{
     font-family: 'Oswald', sans-serif;
+}
+.pure-g {
+    margin-bottom: 25px;
 }
