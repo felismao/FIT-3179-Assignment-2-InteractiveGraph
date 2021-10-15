@@ -34,9 +34,8 @@
   "field": "VEI",
   "type": "quantitative",
   "scale": {
-    "domain": [3,4, 5, 6, 7],
-    "type": "threshold",
-     "range":  ["#fdae6b","#fd8d3c","#e6550d","#a63603"]}
+      "domain": [1,2,3,4,5,6,7],
+      "range": ["#fdae6b","#fd8d3c","#e6550d","#a63603"]}
 
     },
      "tooltip": [
@@ -47,7 +46,7 @@
      ]
   },
   "layer": [
-      {"mark": {"type": "circle", "opacity": 1, "size": 15}},
+      {"mark": {"type": "circle", "opacity": 1, "size": 40}},
             {
               "transform": [
                 {
@@ -86,7 +85,7 @@
         "x": {
           "field": "Year",
           "timeUnit": "year",
-          "axis": {"title": "", "format": "%Y"}
+          "axis": {"title": "", "format": "%Y", "scale":{"domain":[1600,2020]} }
         },
         "y": {
           "aggregate": "count",
