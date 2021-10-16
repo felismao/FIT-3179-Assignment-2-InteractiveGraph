@@ -15,6 +15,11 @@ p{
 
 .pure-g {
     margin-bottom: 25px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 
