@@ -1,20 +1,20 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "data": {"url": "https://raw.githubusercontent.com/felismao/FIT-3179-Assignment-2/main/Data/volcano-events0-21.csv"},
-    "title":"Volcanoes with the most casualties",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "#F9EDCC",
+  "data": {"url": "https://raw.githubusercontent.com/felismao/FIT-3179-Assignment-2/main/Data/volcano-events0-21.csv"},
+  "title":"Volcanoes with the most casualties",
     "width": 400,
-    "mark": "bar",
-    "encoding": {
-      "x": {"field": "Deaths", "type": "quantitative"},
-      "y": {"field": "Name", "type": "nominal","sort":"-x"},
-      "tooltip":[
-        {"field":"Deaths", "type":"quantitative"},
-        {"field":"Year", "type":"nominal"},
-        {"field":"Type", "type":"nominal"}
-      ]
-    },
-      "transform":[
-      {"filter":"datum.Deaths >= 5000"}
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "Deaths", "type": "quantitative"},
+    "y": {"field": "Name", "type": "nominal","sort":"-x"},
+    "color":{"value":"#D66853"},
+    "tooltip":[
+      {"field":"Deaths", "type":"quantitative"},
+      {"field":"Year", "type":"nominal"}
     ]
-  }
-  
+  },
+    "transform":[
+    {"filter":"datum.Deaths >= 5000"}
+  ]
+}
