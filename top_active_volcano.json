@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "https://raw.githubusercontent.com/felismao/FIT-3179-Assignment-2/main/Data/volcano-events0-21.csv"},
   "title": "Type of Volcano with the most activity",
-  "width": "300px",
+  "width": 400,
   "mark": "bar",
   "transform": [
     {
