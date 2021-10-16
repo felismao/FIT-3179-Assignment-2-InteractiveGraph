@@ -39,7 +39,7 @@
 
     },
      "tooltip": [
-              {"field": "Year", "type": "quantitative"},
+              {"field": "Year", "type": "temporal"},
               {"field": "VEI", "type": "quantitative"},
               {"field": "Name", "type": "nominal"},
               {"field": "Type", "type": "nominal"},
