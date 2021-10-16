@@ -13,6 +13,7 @@
     
     "x": {"field": "Year", "type":"nominal"},
     "y": {"aggregate":"count", "field": "Year", "type": "quantitative"},
+    "color":{"value":"#D66853"},
   "tooltip":[
   {"field": "Year", "type":"nominal"},
   {"aggregate":"count" ,"type":"quantitative"}

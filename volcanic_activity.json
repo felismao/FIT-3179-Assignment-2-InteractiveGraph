@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "projection": {"type": "equalEarth"}, 
-  "background": "#F9EDCC",
+  "background": "#f1ead5",
   "vconcat": [
   {
   "width": "900",
@@ -94,7 +94,8 @@
           "aggregate": "count",
           "axis": {"tickCount": 5, "grid": false},
           "title": "Count"
-        }
+        },
+        "color":{"value":"#D66853"}
       }
   }
   ]
