@@ -1,32 +1,18 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {"url": "https://raw.githubusercontent.com/felismao/FIT-3179-Assignment-2/main/Data/volcano-events0-21.csv"},
-    "title":"Top 10 Volcanoes with the most death",
-  "mark": "bar",
-   "transform": [
-      {
-        "window": [{
-          "op": "rank",
-          "as": "rank"
-        }],
-        "sort": [{ "field": "Deaths", "order": "descending" }]
-      }, {
-        "filter": "datum.rank <= 10"
-      }
-    ],
+    "title":"Volcanoes with the most casualties",
+    "mark": "bar",
     "encoding": {
-      "x": {
-          "field": "Deaths",
-          "type": "quantitative"
-      },
-      "y": {
-          "field": "Name",
-          "type": "nominal",
-          "sort": {"field": "Deaths", "op": "average", "order":"descending"}
-      },
-       "tooltip":[
-      {"field": "Deaths", "type": "quantitative"}
-       ]
-    }
-    }
+      "x": {"field": "Deaths", "type": "quantitative"},
+      "y": {"field": "Name", "type": "nominal","sort":"-x"},
+      "tooltip":[
+        {"field":"Deaths", "type":"quantitative"},
+        {"field":"Year", "type":"nominal"}
+      ]
+    },
+      "transform":[
+      {"filter":"datum.Deaths >= 5000"}
+    ]
+  }
   
