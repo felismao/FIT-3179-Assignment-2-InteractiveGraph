@@ -55,4 +55,8 @@ p{
   .column {
     flex: 50%;
   }
+  
+  #volcanic-number-peryear{
+      align-self: center;
+  }
 
