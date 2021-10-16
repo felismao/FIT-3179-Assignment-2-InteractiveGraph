@@ -37,3 +37,11 @@ p{
 .description-left {
     padding-right: 20px;
 }
+
+.row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 50%;
+  }
