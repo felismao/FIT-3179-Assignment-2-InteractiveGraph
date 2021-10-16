@@ -2,7 +2,7 @@
     font-family: 'Oswald', sans-serif;
     font-size: 50px;
     text-align: center;
-    color: #d66853;
+    color: #c55842;
 }
 
 h2{
@@ -10,13 +10,13 @@ h2{
     font-size: 25px;
     margin-bottom: 25px;
     text-align: center;
+    color: #c55842;
 }
 
 .separate{
     size: 5;
     width: 90%;
     color: #EA2B1F;
-    color: #d66853;
 }
 
 .container {
