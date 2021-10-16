@@ -2,6 +2,7 @@
     font-family: 'Oswald', sans-serif;
     font-size: 50px;
     text-align: center;
+    color: #d66853;
 }
 
 h2{
@@ -15,6 +16,7 @@ h2{
     size: 5;
     width: 90%;
     color: #EA2B1F;
+    color: #d66853;
 }
 
 .container {
