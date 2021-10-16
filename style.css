@@ -24,3 +24,11 @@ p{
     padding: 50px;
     padding-top: 35px;
 }
+
+.description-right {
+    padding-left: 20px;
+}
+
+.description-left {
+    padding-right: 20px;
+}
