@@ -25,7 +25,7 @@
       "title": "number of activity"
     },
     "y": {
-      "sort": {"op": "count", "field": "aggregate_year", "order": "descending"},
+      "sort": {"op": "average", "field": "aggregate_year", "order": "descending"},
       "field": "ranked_type",
       "type": "ordinal",
       "title": null

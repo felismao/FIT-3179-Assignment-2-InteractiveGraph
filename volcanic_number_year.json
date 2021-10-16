@@ -1,34 +1,22 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "data": {"url": "https://raw.githubusercontent.com/felismao/FIT-3179-Assignment-2/main/Data/volcano-events0-21.csv"},
-    "title": "Number of Volcanic Activity Per Year",
-      "width": 1200,
-    "height": 200,
-    "mark": {
-      "type": "line",
-      "point": true
-    },
-    "params":[{
-      "name": "year",
-      "value": 1970,
-      "bind":{
-        "input":"range",
-        "min": 1970,
-        "max": 2020,
-        "step": 5
-      }
-    }],
-    "encoding": {
-      
-      "x": {"field": "Year", "type":"nominal"},
-      "y": {"aggregate":"count", "field": "Year", "type": "quantitative"},
-    "tooltip":[
-    {"field": "Year", "type":"nominal"},
-    {"aggregate":"count" ,"type":"quantitative"}
-  ]
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "https://raw.githubusercontent.com/felismao/FIT-3179-Assignment-2/main/Data/volcano-events0-21.csv"},
+  "title": "Number of Volcanic Activity Per Year",
+    "width": 1200,
+  "height": 200,
+  "mark": {
+    "type": "line",
+    "point": true
   },
-  "transform":[
-  {"filter": "datum.Year > year"},
-  {"filter": "year >= 1970"}]
-  }
-  
+  "encoding": {
+    
+    "x": {"field": "Year", "type":"nominal"},
+    "y": {"aggregate":"count", "field": "Year", "type": "quantitative"},
+  "tooltip":[
+  {"field": "Year", "type":"nominal"},
+  {"aggregate":"count" ,"type":"quantitative"}
+]
+},
+"transform":[
+{"filter": "datum.Year >= 1970"}]
+}
