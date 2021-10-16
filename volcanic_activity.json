@@ -42,6 +42,7 @@
               {"field": "Year", "type": "temporal"},
               {"field": "VEI", "type": "quantitative"},
               {"field": "Name", "type": "nominal"},
+              {"field": "Type", "type": "nominal"},
               {"field": "Location", "type": "nominal"},
               {"field": "Country", "type": "nominal"}
      ]

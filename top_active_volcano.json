@@ -1,6 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Most Active Volcano Type",
   "data": {"url": "https://raw.githubusercontent.com/felismao/FIT-3179-Assignment-2/main/Data/volcano-events0-21.csv"},
   "mark": "bar",
   "transform": [
