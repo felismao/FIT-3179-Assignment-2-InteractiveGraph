@@ -2,6 +2,24 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "projection": {"type": "equalEarth"}, 
   "background": "#fcf5df",
+  "params":[
+      {
+        "name": "type_selection",
+        "bind": {
+          "input": "select",
+          "options": [
+            null,
+            "Stratovolcano",
+            "Complex Volcano",
+            "Caldera",
+            "Shield volcano",
+            "Submarine volcano",
+            "Subglacial volcano"          
+          ],
+          "name": "Volcano Type"
+        }
+      }
+    ],
   "vconcat": [
   {
   "width": "900",
@@ -23,7 +41,8 @@
   
   {
     "transform": [
- {"filter": {"param": "time_brush"}}
+ {"filter": {"param": "time_brush"}},
+ {"filter": "type_selection == null || datum.Type == type_selection"}
 ],
   
   "mark": {"type": "circle"},
